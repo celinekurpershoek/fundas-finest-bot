@@ -85,11 +85,19 @@ controller.on('bot_channel_join', function (bot, message) {
     bot.reply(message, "I'm here!")
 });
 
-controller.hears('hello', 'direct_message', function (bot, message) {
-    bot.reply(message, 'Hello!');
+controller.hears('[fundasfinest]','direct_mention,direct_message', function (bot, message) {
+    const text = message.text || '';
+    const address = text.split(' ').filter(entry => entry.match('#') !== null)
+    if(address.includes('#fundasfinest')) {
+        const street = address[1].slice(1)
+        const city = address[2].slice(1)
+        const fundaUrl = `https://www.funda.nl/koop/${city}/straat-${street}/`
+
+        bot.reply(message, `Let me grab the search page for this beauty; ${fundaUrl}`);
+    } else {
+        bot.reply(message, 'Hoi!')
+    }
 });
-
-
 /**
  * AN example of what could be:
  * Any un-handled direct mention gets a reaction and a pat response!

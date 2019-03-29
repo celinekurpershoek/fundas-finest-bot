@@ -1,7 +1,7 @@
 {
-  "name": "easy-peasy-bot",
+  "name": "fundas-laziest-bot",
   "version": "1.0.0",
-  "description": "The awesomest bot evar.",
+  "description": "Respond to a ifttt instagram update in slack with the url of a funda's finest.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -9,18 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DEGoodmanWilson/easy-peasy-bot-app.git"
+    "url": "git+https://github.com/celinekurpershoek/fundas-laziest-bot.git"
   },
   "keywords": [
     "slack",
     "bot"
   ],
-  "author": "D.E. Goodman-Wilson",
+  "author": "Celine Kurpershoek",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/DEGoodmanWilson/easy-peasy-bot-app/issues"
-  },
-  "homepage": "https://github.com/DEGoodmanWilson/easy-peasy-bot-app#readme",
   "engines": {
     "node": "5.1.1"
   },
